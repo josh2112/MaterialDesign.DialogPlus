@@ -10,6 +10,11 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RootNamespace>Com.Josh2112.Libs.MaterialDesign.DialogPlus</RootNamespace>
+    <PackageProjectUrl>https://github.com/josh2112/MaterialDesign.DialogPlus</PackageProjectUrl>
+    <Copyright>Copyright © 2023 Josh2112 Apps</Copyright>
+    <Description>A small package to make working with MaterialDesignInXaml dialogs a bit easier.</Description>
+    <PackageTags>materialdesigninxaml;materialdesignthemes;materialdesigncolors;dialoghost;dialog</PackageTags>
+    <PackageReleaseNotes>Initial release</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>

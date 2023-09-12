@@ -1,1 +1,3 @@
-﻿This is my package, hope you like it
+﻿MaterialDesign.DialogPlus is a small package to make working with dialogs a bit easier in the excellent [MaterialDesignInXaml](https://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit). It consists of only a few small files, has no dependencies (besides MaterialDesignInXaml!) and supports .NET 7.0 all the way back to .NET Framework 4.6.2.
+
+See the [GitHub project](https://github.com/josh2112/MaterialDesign.DialogPlus) for full README and examples.
