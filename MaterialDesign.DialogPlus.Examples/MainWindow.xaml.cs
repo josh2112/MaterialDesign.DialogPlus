@@ -17,7 +17,7 @@ namespace MaterialDesign.DialogPlus.Examples
 
         private async void BasicDialogButton_Click( object sender, RoutedEventArgs e )
         {
-            var result = await this.ShowDialogForResultAsync( new Dialogs.Dialog( "Question",
+            ButtonDef result = await this.ShowDialogForResultAsync( new Dialogs.Dialog( "Question",
                 "Your confrobulator has unsaved changes. What do you want to do?",
                 ButtonDef.Neutral( "Keep working", isCancel: true ),
                 ButtonDef.Negative( "Delete it" ),
@@ -39,7 +39,19 @@ namespace MaterialDesign.DialogPlus.Examples
             }
             catch( OperationCanceledException )
             {
-                Messages.Enqueue( $"Dialog closed by cancellation token" );
+                Messages.Enqueue( "Dialog closed by cancellation token" );
+            }
+        }
+
+        private async void FormInputDialogButton_Click( object sender, RoutedEventArgs e )
+        {
+            if( await this.ShowDialogForResultAsync( new FormInputDialog() ) is Form form )
+            {
+                Messages.Enqueue( $"Dialog returned Form( Name='{form.Name}', Age='{form.Age}', Email='{form.Email}' )" );
+            }
+            else
+            {
+                Messages.Enqueue( "Dialog canceled" );
             }
         }
     }
