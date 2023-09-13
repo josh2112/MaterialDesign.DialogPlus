@@ -3,14 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              UseLayoutRounding="True">
 
-    <UserControl.Resources>
-        <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="pack://application:,,,/MaterialDesign.DialogPlus;component/ButtonStyles.xaml"/>
-            </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
-    </UserControl.Resources>
-
     <StackPanel DataContext="{Binding RelativeSource={RelativeSource AncestorType=UserControl}}" Margin="20">
         <TextBlock Style="{StaticResource MaterialDesignHeadline4TextBlock}" TextWrapping="Wrap"
                    Text="Info needed" Margin="0,0,0,10"/>
@@ -34,14 +26,13 @@
 
             <TextBlock Grid.Row="2" Style="{StaticResource MaterialDesignTextBlock}" Text="Email" VerticalAlignment="Center"/>
             <TextBox Grid.Row="2" Grid.Column="1" Margin="10,0,0,0" Text="{Binding Email}" VerticalAlignment="Center"/>
-        
         </Grid>
 
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0">
-            <Button Content="Cancel" Style="{StaticResource DialogButtonStyle}" IsCancel="True"
+            <Button Content="Cancel" Style="{StaticResource MaterialDesign.DialogPlus.NeutralButton}" IsCancel="True"
                     Command="{Binding CancelCommand}"/>
-            <Button Content="OK" Style="{StaticResource PositiveButtonStyle}" IsDefault="True"
-                    Command="{Binding SubmitCommand}"/>
+            <Button Content="OK" Style="{StaticResource MaterialDesign.DialogPlus.PositiveButton}"
+                    Margin="10,0,0,0" IsDefault="True" Command="{Binding SubmitCommand}"/>
         </StackPanel>
     </StackPanel>
 </UserControl>

@@ -4,7 +4,7 @@
 	<TargetFrameworks>net462;net6.0-windows;net7.0-windows</TargetFrameworks>
 	<UseWPF>true</UseWPF>
     <Title>DialogPlus for MaterialDesignInXaml</Title>
-    <Version>1.0.0</Version>
+    <Version>1.1.0</Version>
     <Authors>Joshua Foster</Authors>
     <Company>Josh2112 Apps</Company>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -15,6 +15,7 @@
     <Description>A small package to make working with MaterialDesignInXaml dialogs a bit easier.</Description>
     <PackageTags>materialdesigninxaml;materialdesignthemes;materialdesigncolors;dialoghost;dialog</PackageTags>
     <PackageReleaseNotes>Initial release</PackageReleaseNotes>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>

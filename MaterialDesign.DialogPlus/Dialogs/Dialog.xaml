@@ -3,14 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              UseLayoutRounding="True">
 
-    <UserControl.Resources>
-        <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="pack://application:,,,/MaterialDesign.DialogPlus;component/ButtonStyles.xaml"/>
-            </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
-    </UserControl.Resources>
-
     <StackPanel DataContext="{Binding RelativeSource={RelativeSource AncestorType=UserControl}}" Margin="20">
         <TextBlock Style="{StaticResource MaterialDesignHeadline4TextBlock}" TextWrapping="Wrap" Text="{Binding Title}" Margin="0,0,0,10"/>
         <TextBlock Style="{StaticResource MaterialDesignTextBlock}" TextWrapping="Wrap" Text="{Binding Message}"/>
@@ -23,16 +15,16 @@
             </ItemsControl.ItemsPanel>
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
-                    <Button x:Name="innerButton" Click="Button_Click" Content="{Binding Text}"/>
+                    <Button x:Name="innerButton" Click="Button_Click" Content="{Binding Text}" Margin="10,0,0,0"/>
                     <DataTemplate.Triggers>
                         <DataTrigger Binding="{Binding Connotation}" Value="Positive">
-                            <Setter TargetName="innerButton" Property="Style" Value="{StaticResource PositiveButtonStyle}"/>
+                            <Setter TargetName="innerButton" Property="Style" Value="{StaticResource MaterialDesign.DialogPlus.PositiveButton}"/>
                         </DataTrigger>
                         <DataTrigger Binding="{Binding Connotation}" Value="Negative">
-                            <Setter TargetName="innerButton" Property="Style" Value="{StaticResource NegativeButtonStyle}"/>
+                            <Setter TargetName="innerButton" Property="Style" Value="{StaticResource MaterialDesign.DialogPlus.NegativeButton}"/>
                         </DataTrigger>
                         <DataTrigger Binding="{Binding Connotation}" Value="Neutral">
-                            <Setter TargetName="innerButton" Property="Style" Value="{StaticResource DialogButtonStyle}"/>
+                            <Setter TargetName="innerButton" Property="Style" Value="{StaticResource MaterialDesign.DialogPlus.NeutralButton}"/>
                         </DataTrigger>
                         <DataTrigger Binding="{Binding IsDefault}" Value="True">
                             <Setter TargetName="innerButton" Property="IsDefault" Value="True"/>

@@ -1,0 +1,12 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Style x:Key="MaterialDesign.DialogPlus.NeutralButton" TargetType="Button" BasedOn="{StaticResource MaterialDesignOutlinedButton}"/>
+
+    <Style x:Key="MaterialDesign.DialogPlus.PositiveButton" TargetType="Button" BasedOn="{StaticResource MaterialDesignRaisedButton}"/>
+
+    <Style x:Key="MaterialDesign.DialogPlus.NegativeButton" TargetType="Button" BasedOn="{StaticResource MaterialDesignOutlinedButton}">
+        <Setter Property="BorderBrush" Value="{DynamicResource MaterialDesignValidationErrorBrush}"/>
+        <Setter Property="Foreground" Value="{DynamicResource MaterialDesignValidationErrorBrush}"/>
+    </Style>
+</ResourceDictionary>

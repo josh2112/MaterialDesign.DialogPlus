@@ -8,7 +8,15 @@
             <ResourceDictionary.MergedDictionaries>
                 <mdix:BundledTheme BaseTheme="Light" PrimaryColor="DeepPurple" SecondaryColor="Lime" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesign3.Defaults.xaml" />
+
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesign.DialogPlus;component/Themes/Defaults.xaml" />
             </ResourceDictionary.MergedDictionaries>
+
+            <Style x:Key="MaterialDesign.DialogPlus.NegativeButton" TargetType="Button" BasedOn="{StaticResource MaterialDesignRaisedButton}">
+                <Setter Property="Background" Value="Salmon"/>
+                <Setter Property="BorderBrush" Value="Salmon"/>
+            </Style>
+            
         </ResourceDictionary>
     </Application.Resources>
 </Application>
